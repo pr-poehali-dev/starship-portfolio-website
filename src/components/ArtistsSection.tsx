@@ -7,30 +7,23 @@ import Icon from "@/components/ui/icon";
 const ArtistsSection: React.FC = () => {
   const artists = [
     {
-      name: "STELLAR NOVA",
+      name: "ASTRAL",
       type: "Girl Group",
-      members: 4,
-      followers: "2.5M",
-      image: "/placeholder.svg",
+      members: 5,
+      followers: "2.8M",
+      image:
+        "https://i.pinimg.com/736x/d7/8d/77/d78d77c3f5b7a8d2f3d6a9b3f8c9a7b2.jpg",
       tags: ["K-Pop", "Dance", "Vocal"],
       status: "Active",
     },
     {
-      name: "COSMIC BOYS",
-      type: "Boy Group",
-      members: 7,
-      followers: "3.2M",
-      image: "/placeholder.svg",
-      tags: ["K-Pop", "Hip-Hop", "Performance"],
-      status: "Active",
-    },
-    {
-      name: "LUNA SOLOIST",
-      type: "Solo Artist",
-      members: 1,
-      followers: "1.8M",
-      image: "/placeholder.svg",
-      tags: ["Ballad", "R&B", "OST"],
+      name: "BLADY",
+      type: "Girl Group",
+      members: 3,
+      followers: "1.9M",
+      image:
+        "https://i.pinimg.com/736x/a3/2f/8e/a32f8e6c7b9d4f1e2a5c6d8b3f9e2a1c.jpg",
+      tags: ["K-Pop", "R&B", "Performance"],
       status: "Active",
     },
   ];
@@ -47,15 +40,28 @@ const ArtistsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {artists.map((artist, index) => (
             <Card
               key={index}
               className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300"
             >
               <CardHeader className="pb-4">
-                <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg mb-4 flex items-center justify-center">
-                  <Icon name="Music" className="h-12 w-12 text-white" />
+                <div className="w-full h-48 bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg mb-4 overflow-hidden">
+                  <img
+                    src={artist.image}
+                    alt={artist.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      e.currentTarget.parentElement!.className =
+                        "w-full h-48 bg-gradient-to-br from-pink-500 to-purple-500 rounded-lg mb-4 flex items-center justify-center";
+                      e.currentTarget.parentElement!.innerHTML =
+                        '<div class="text-white text-center"><svg class="h-12 w-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg><p class="text-sm">' +
+                        artist.name +
+                        "</p></div>";
+                    }}
+                  />
                 </div>
                 <CardTitle className="text-xl text-white">
                   {artist.name}

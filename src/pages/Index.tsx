@@ -6,7 +6,7 @@ import ContactSection from "@/components/ContactSection";
 
 const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-pink-900 via-purple-900 to-pink-900">
       <HeroSection />
       <ArtistsSection />
       <ServicesSection />
