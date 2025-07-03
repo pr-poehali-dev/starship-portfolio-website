@@ -25,6 +25,7 @@ const ArtistsSection: React.FC = () => {
         "https://i.pinimg.com/736x/a3/2f/8e/a32f8e6c7b9d4f1e2a5c6d8b3f9e2a1c.jpg",
       tags: ["K-Pop", "R&B", "Performance"],
       status: "Active",
+      link: "https://t.me/BLADYSTARSH",
     },
   ];
 
@@ -92,6 +93,10 @@ const ArtistsSection: React.FC = () => {
                   <Button
                     className="w-full mt-4 bg-purple-600 hover:bg-purple-700"
                     size="sm"
+                    onClick={() =>
+                      artist.link && window.open(artist.link, "_blank")
+                    }
+                    disabled={!artist.link}
                   >
                     <Icon name="ExternalLink" className="mr-2 h-4 w-4" />
                     Подробнее
