@@ -15,6 +15,7 @@ const ArtistsSection: React.FC = () => {
         "https://i.pinimg.com/736x/d7/8d/77/d78d77c3f5b7a8d2f3d6a9b3f8c9a7b2.jpg",
       tags: ["K-Pop", "Dance", "Vocal"],
       status: "Active",
+      link: "https://t.me/ASTRALSHIP",
     },
     {
       name: "BLADY",
