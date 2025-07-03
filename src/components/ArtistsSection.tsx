@@ -12,7 +12,7 @@ const ArtistsSection: React.FC = () => {
       members: 5,
       followers: "2.8M",
       image:
-        "https://i.pinimg.com/736x/d7/8d/77/d78d77c3f5b7a8d2f3d6a9b3f8c9a7b2.jpg",
+        "https://i.pinimg.com/736x/cd/4e/7a/cd4e7a8f9b2c5d6e3a1f4b7c9e2a5d8f.jpg",
       tags: ["K-Pop", "Dance", "Vocal"],
       status: "Active",
       link: "https://t.me/ASTRALSHIP",
@@ -23,7 +23,7 @@ const ArtistsSection: React.FC = () => {
       members: 3,
       followers: "1.9M",
       image:
-        "https://i.pinimg.com/736x/a3/2f/8e/a32f8e6c7b9d4f1e2a5c6d8b3f9e2a1c.jpg",
+        "https://i.pinimg.com/736x/f2/6d/9c/f26d9c4e7b8a5f3e2d6c9b4e7a2f5d8c.jpg",
       tags: ["K-Pop", "R&B", "Performance"],
       status: "Active",
       link: "https://t.me/BLADYSTARSH",
